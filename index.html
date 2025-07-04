@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="monetag" content="f99dde558c619ad60b1e9ea6f96f554c">
+  <meta name="monetag" content="f99dde558c619ad60b1e9ea6f96f554c" />
   <meta name="google-site-verification" content="K55DTPrL1Kh1slZIdac4TgaArhFDKk6ZVUFt6IY2f_M" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,21 +15,88 @@
 <body>
   <header>
     <h1>🚀 BoostTextTools</h1>
-    <p>Your free online hub for SEO-friendly text tools.</p>
+    <p>Your free online hub for SEO‑friendly text tools.</p>
   </header>
 
-  <!-- 🔸 Ads Placeholder (visible block) -->
+  <!-- Ads Placeholder -->
   <div class="ad-block" style="text-align:center; margin:20px;">
     <script async src="https://al5sm.com/tag.min.js" data-zone="9525760" data-cfasync="false"></script>
   </div>
 
   <main class="tool-grid">
-    <!-- Your tools like Word Counter, Hashtag Generator etc. remain here -->
-    <!-- ⚠️ Make sure you didn't delete tool sections -->
+
+    <section class="tool-card">
+      <h2>Word Counter</h2>
+      <textarea id="wordInput" placeholder="Type or paste text..."></textarea>
+      <p><strong>Words:</strong> <span id="wordCount">0</span></p>
+    </section>
+
+    <section class="tool-card">
+      <h2>Character Counter</h2>
+      <textarea id="charInput" placeholder="Type or paste text..."></textarea>
+      <p><strong>Characters:</strong> <span id="charCount">0</span></p>
+    </section>
+
+    <section class="tool-card">
+      <h2>Reading Time Estimator</h2>
+      <textarea id="readingInput" placeholder="Enter your text..."></textarea>
+      <p><strong>Estimated Reading Time:</strong> <span id="readingTime">0 min</span></p>
+    </section>
+
+    <section class="tool-card">
+      <h2>Keyword Density Checker</h2>
+      <textarea id="keywordInput" placeholder="Paste your text..."></textarea>
+      <button onclick="analyzeKeywords()">Check Density</button>
+      <div id="keywordResults"></div>
+    </section>
+
+    <section class="tool-card">
+      <h2>Hashtag Generator</h2>
+      <textarea id="hashtagInput" placeholder="Enter keywords..."></textarea>
+      <button onclick="generateHashtags()">Generate</button>
+      <p><strong>Hashtags:</strong> <span id="hashtags"></span></p>
+    </section>
+
+    <section class="tool-card">
+      <h2>Case Converter</h2>
+      <textarea id="caseInput" placeholder="Enter your text..."></textarea>
+      <button onclick="toUpper()">UPPERCASE</button>
+      <button onclick="toLower()">lowercase</button>
+    </section>
+
+    <section class="tool-card">
+      <h2>Line Counter</h2>
+      <textarea id="lineInput" placeholder="Paste multi-line text..."></textarea>
+      <p><strong>Lines:</strong> <span id="lineCount">0</span></p>
+    </section>
+
+    <section class="tool-card">
+      <h2>Remove Extra Spaces</h2>
+      <textarea id="spaceInput" placeholder="Enter messy text..."></textarea>
+      <button onclick="removeSpaces()">Clean Text</button>
+    </section>
+
+    <section class="tool-card">
+      <h2>Meta Tag Generator</h2>
+      <input type="text" id="metaTitle" placeholder="Title" />
+      <input type="text" id="metaDesc" placeholder="Description" />
+      <button onclick="generateMetaTags()">Generate</button>
+      <pre id="metaOutput"></pre>
+    </section>
+
+    <section class="tool-card">
+      <h2>Privacy Policy Generator</h2>
+      <input type="text" id="siteName" placeholder="Website Name" />
+      <input type="email" id="email" placeholder="Contact Email" />
+      <button onclick="generatePrivacy()">Generate</button>
+      <pre id="privacyOutput"></pre>
+    </section>
+
   </main>
 
   <footer>
     <p>&copy; 2025 BoostTextTools. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
