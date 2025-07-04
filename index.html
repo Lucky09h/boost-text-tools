@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="monetag" content="f99dde558c619ad60b1e9ea6f96f554c" />
   <meta name="google-site-verification" content="K55DTPrL1Kh1slZIdac4TgaArhFDKk6ZVUFt6IY2f_M" />
-
-  <!-- Optimized Meta Tags for SEO -->
-  <meta name="description" content="BoostTextTools offers free tools like word counter, keyword checker, hashtag generator, meta tag creator, and more to improve your writing and SEO." />
-  <meta name="keywords" content="word counter, character counter, SEO tools, hashtag generator, keyword density checker, meta tag generator, free text tools" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BoostTextTools - Free online SEO and text tools like word counter, keyword density checker, and more." />
+  <meta name="keywords" content="word counter, text tools, SEO tools, keyword checker, meta generator" />
   <meta name="author" content="BoostTextTools Team" />
-
-  <!-- Open Graph Meta Tags for Social Sharing -->
-  <meta property="og:title" content="BoostTextTools - Free SEO & Text Tools Online" />
-  <meta property="og:description" content="BoostTextTools offers free tools like word counter, keyword checker, hashtag generator, and more to improve your content and SEO." />
-  <meta property="og:url" content="https://boost-text-tools.netlify.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://boost-text-tools.netlify.app/assets/preview.png" />
-
   <title>🚀 BoostTextTools - All-in-One SEO & Text Utilities</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "BoostTextTools",
+    "url": "https://boost-text-tools.netlify.app/"
+  }
+  </script>
 </head>
 <body>
   <header>
@@ -28,39 +28,54 @@
     <p>Your free online hub for SEO‑friendly text tools.</p>
   </header>
 
+  <!-- Navigation Links -->
+  <nav style="text-align:center; margin-bottom:20px;">
+    <a href="#word-counter">Word Counter</a> |
+    <a href="#character-counter">Character Counter</a> |
+    <a href="#reading-time">Reading Time</a> |
+    <a href="#keyword-density">Keyword Checker</a> |
+    <a href="#hashtag-generator">Hashtag Tool</a>
+  </nav>
+
   <!-- Ads Placeholder -->
   <div class="ad-block" style="text-align:center; margin:20px;">
     <script async src="https://al5sm.com/tag.min.js" data-zone="9525760" data-cfasync="false"></script>
   </div>
 
   <main class="tool-grid">
-    <section class="tool-card">
+
+    <section class="tool-card" id="word-counter">
       <h2>Word Counter</h2>
+      <p>This tool counts words and characters in real-time. Perfect for writers and marketers needing quick stats for SEO or academic work.</p>
       <textarea id="wordInput" placeholder="Type or paste text..."></textarea>
       <p><strong>Words:</strong> <span id="wordCount">0</span></p>
     </section>
 
-    <section class="tool-card">
+    <section class="tool-card" id="character-counter">
       <h2>Character Counter</h2>
+      <p>Use this character counter to get accurate counts of every letter, space, and symbol. Great for tweets, SMS, or meta tags.</p>
       <textarea id="charInput" placeholder="Type or paste text..."></textarea>
       <p><strong>Characters:</strong> <span id="charCount">0</span></p>
     </section>
 
-    <section class="tool-card">
+    <section class="tool-card" id="reading-time">
       <h2>Reading Time Estimator</h2>
+      <p>Estimate how long it takes to read your text. This tool is ideal for bloggers, publishers, and content creators focused on UX.</p>
       <textarea id="readingInput" placeholder="Enter your text..."></textarea>
       <p><strong>Estimated Reading Time:</strong> <span id="readingTime">0 min</span></p>
     </section>
 
-    <section class="tool-card">
+    <section class="tool-card" id="keyword-density">
       <h2>Keyword Density Checker</h2>
+      <p>Analyze keyword repetition and density to optimize content for search engines without keyword stuffing.</p>
       <textarea id="keywordInput" placeholder="Paste your text..."></textarea>
       <button onclick="analyzeKeywords()">Check Density</button>
       <div id="keywordResults"></div>
     </section>
 
-    <section class="tool-card">
+    <section class="tool-card" id="hashtag-generator">
       <h2>Hashtag Generator</h2>
+      <p>Automatically generate hashtags based on your keywords to boost visibility on social media platforms.</p>
       <textarea id="hashtagInput" placeholder="Enter keywords..."></textarea>
       <button onclick="generateHashtags()">Generate</button>
       <p><strong>Hashtags:</strong> <span id="hashtags"></span></p>
@@ -100,6 +115,7 @@
       <button onclick="generatePrivacy()">Generate</button>
       <pre id="privacyOutput"></pre>
     </section>
+
   </main>
 
   <!-- Monetag Excited Tag (Zone ID: 9525749) -->
