@@ -2,49 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <!-- ✅ Verification Tags -->
-  <meta name="msvalidate.01" content="87FCA7ABF98937AB887B066D8186E394" />
-  <meta name="monetag" content="f99dde558c619ad60b1e9ea6f96f554c" />
   <meta name="google-site-verification" content="K55DTPrL1Kh1slZIdac4TgaArhFDKk6ZVUFt6IY2f_M" />
+  <meta name="monetag" content="f99dde558c619ad60b1e9ea6f96f554c" />
+  <meta name="msvalidate.01" content="87FCA7ABF98937AB887B066D8186E394" />
 
-  <!-- ✅ SEO Meta Tags -->
-  <title>All in One SEO Tools – Free Online Text & SEO Utilities</title>
-  <meta name="description" content="All in One SEO Tools - Free online tools to clean, format, and optimize text for SEO, blogging, and writing." />
-  <meta name="keywords" content="SEO tools, text tools, word counter, keyword checker, meta generator, content tools" />
+  <!-- ✅ SEO Tags -->
+  <title>All in One SEO Tools – Free Online Text Utilities</title>
+  <meta name="description" content="Free SEO tools like Word Counter, Character Counter, Line Remover and more to optimize content for blogs, SEO and writing." />
+  <meta name="keywords" content="SEO tools, text tools, word counter, remove line breaks, character counter, text cleaner, free tools" />
   <meta name="author" content="All in One SEO Tools Team" />
 
   <!-- ✅ Social Sharing -->
   <meta property="og:title" content="All in One SEO Tools" />
-  <meta property="og:description" content="Free tools to clean, format, and optimize your text for SEO & blogging." />
+  <meta property="og:description" content="Free tools to clean, format, and optimize text for SEO & blogging." />
   <meta property="og:url" content="https://boost-text-tools.netlify.app/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="All in One SEO Tools" />
-  <meta name="twitter:description" content="Free tools to clean, format, and optimize text for SEO." />
 
-  <!-- ✅ CSS & JS -->
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-
-  <!-- ✅ Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "All in One SEO Tools",
-    "url": "https://boost-text-tools.netlify.app/"
-  }
-  </script>
+  <!-- ✅ Stylesheet -->
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; background: #f4f4f4; }
+    textarea { width: 100%; height: 150px; padding: 10px; font-size: 16px; margin-bottom: 10px; }
+    section { background: #fff; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { color: #333; }
+    button { padding: 10px 20px; background: #333; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
 </head>
 
 <body>
   <header>
     <h1>All in One SEO Tools</h1>
-    <p>Your free online hub for SEO‑friendly text tools.</p>
+    <p>Free online tools to help you write, clean, and optimize text for blogs and SEO.</p>
   </header>
+
+  <!-- ✅ Word Counter Tool -->
+  <section>
+    <h2>Word Counter</h2>
+    <textarea id="wordInput" placeholder="Type or paste your content..."></textarea>
+    <p><strong>Words:</strong> <span id="wordCount">0</span></p>
+    <button onclick="countWords()">Count Words</button>
+  </section>
+
+  <!-- ✅ Character Counter -->
+  <section>
+    <h2>Character Counter</h2>
+    <textarea id="charInput" placeholder="Enter text here..."></textarea>
+    <p><strong>Characters:</strong> <span id="charCount">0</span></p>
+    <button onclick="countChars()">Count Characters</button>
+  </section>
+
+  <!-- ✅ Remove Line Breaks Tool -->
+  <section>
+    <h2>Remove Line Breaks</h2>
+    <textarea id="lineInput" placeholder="Paste text with line breaks..."></textarea>
+    <textarea id="lineOutput" placeholder="Result will appear here..." readonly></textarea>
+    <button onclick="removeBreaks()">Remove Breaks</button>
+  </section>
 
   <!-- ✅ Monetag Ads Script -->
   <script>
@@ -60,28 +77,35 @@
     })();
   </script>
 
-  <!-- ✅ Tools Section (Add your tools here) -->
-  <main>
-    <section id="word-counter">
-      <h2>Word Counter Tool</h2>
-      <textarea id="input-text" placeholder="Paste your content here..." rows="8" cols="80"></textarea>
-      <p><strong>Word Count:</strong> <span id="word-count">0</span></p>
-      <button onclick="countWords()">Count Words</button>
-    </section>
-
-    <!-- More tools can go here -->
-  </main>
+  <!-- ✅ Footer Ad -->
+  <section>
+    <h2>Sponsored</h2>
+    <div id="ad-container">
+      <!-- Monetag banner will auto load here -->
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 All in One SEO Tools. All rights reserved.</p>
+    <p>&copy; 2025 All in One SEO Tools. Built with 💙 for content creators.</p>
   </footer>
 
-  <!-- ✅ Word Counter Script Example -->
+  <!-- ✅ JS Logic -->
   <script>
     function countWords() {
-      const text = document.getElementById("input-text").value;
-      const words = text.trim().split(/\s+/).filter(word => word.length > 0);
-      document.getElementById("word-count").textContent = words.length;
+      const text = document.getElementById("wordInput").value.trim();
+      const words = text.split(/\s+/).filter(w => w.length > 0);
+      document.getElementById("wordCount").textContent = words.length;
+    }
+
+    function countChars() {
+      const text = document.getElementById("charInput").value;
+      document.getElementById("charCount").textContent = text.length;
+    }
+
+    function removeBreaks() {
+      const input = document.getElementById("lineInput").value;
+      const cleaned = input.replace(/(\r\n|\n|\r)/gm, " ");
+      document.getElementById("lineOutput").value = cleaned;
     }
   </script>
 </body>
