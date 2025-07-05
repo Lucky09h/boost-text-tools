@@ -8,18 +8,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ Updated SEO Meta Tags -->
-  <meta name="description" content="All in One SEO Tools - Free online tools to optimize, format, and analyze your text and content for better rankings and readability." />
-  <meta name="keywords" content="SEO tools, free SEO utilities, text tools, word counter, character counter, remove line breaks, text case converter, content tools" />
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="All in One SEO Tools – Free Online Tools for SEO, Text Optimization, Meta Tag Generator, Keyword Analyzer & More." />
+  <meta name="keywords" content="SEO tools, keyword tools, free seo analyzer, meta tag generator, text cleaner, word counter, case converter, remove line breaks, html entities converter, slug generator, text to ascii" />
   <meta name="author" content="All in One SEO Tools Team" />
 
-  <!-- ✅ Updated Title -->
-  <title>All in One SEO Tools – Free Online Text & SEO Utilities</title>
+  <title>All in One SEO Tools – Free Online SEO & Text Utilities</title>
 
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 
-  <!-- ✅ Updated Structured Data -->
+  <!-- ✅ Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -30,7 +29,7 @@
   </script>
 
   <!-- ✅ Monetag Ad Script -->
-  <script>
+  <script type="text/javascript">
     (function(s,u,z,p){s.src='https://'+z+'/400/'+u;p.appendChild(s);})
     (document.createElement('script'),'f99dde558c619ad60b1e9ea6f96f554c','pl17563672.highrevenuegate.com',document.body);
   </script>
@@ -38,58 +37,63 @@
 <body>
   <header>
     <h1>All in One SEO Tools</h1>
-    <p>Your free online hub for SEO‑friendly text tools.</p>
+    <p>Your free online SEO and text optimization tools hub.</p>
   </header>
 
-  <!-- ✅ Monetag Ad (Top) -->
-  <div id="monetag-ad-top" style="text-align:center; margin:20px 0;"></div>
+  <div class="ad-container" id="monetag-ad-top"></div>
 
-  <!-- ✅ Tools Section -->
   <main>
-    <section>
-      <h2>Word Counter</h2>
-      <textarea id="wordInput" rows="6" placeholder="Type or paste your text here..."></textarea>
+    <section class="tool">
+      <h2>Word & Character Counter</h2>
+      <textarea id="wordInput"></textarea>
       <p>Words: <span id="wordCount">0</span> | Characters: <span id="charCount">0</span></p>
     </section>
 
-    <section>
+    <section class="tool">
       <h2>Remove Extra Spaces</h2>
-      <textarea id="spaceInput" rows="4" placeholder="Paste text to clean spaces"></textarea>
+      <textarea id="spaceInput"></textarea>
       <button onclick="removeSpaces()">Clean Spaces</button>
     </section>
 
-    <section>
-      <h2>Lowercase / Uppercase</h2>
-      <textarea id="caseInput" rows="4" placeholder="Paste your text"></textarea>
-      <button onclick="toLowerCaseText()">To Lowercase</button>
-      <button onclick="toUpperCaseText()">To Uppercase</button>
+    <section class="tool">
+      <h2>Case Converter</h2>
+      <textarea id="caseInput"></textarea>
+      <button onclick="toLowerCaseText()">Lowercase</button>
+      <button onclick="toUpperCaseText()">Uppercase</button>
     </section>
 
-    <section>
+    <section class="tool">
       <h2>Remove Line Breaks</h2>
-      <textarea id="lineInput" rows="4" placeholder="Paste text to remove line breaks"></textarea>
-      <button onclick="removeLineBreaks()">Remove Line Breaks</button>
+      <textarea id="lineInput"></textarea>
+      <button onclick="removeLineBreaks()">Remove Breaks</button>
+    </section>
+
+    <section class="tool">
+      <h2>Meta Tag Generator</h2>
+      <input type="text" id="metaTitle" placeholder="Enter Page Title">
+      <input type="text" id="metaDescription" placeholder="Enter Description">
+      <button onclick="generateMetaTags()">Generate</button>
+      <pre id="metaOutput"></pre>
     </section>
   </main>
 
-  <!-- ✅ Monetag Ad (Bottom) -->
-  <div id="monetag-ad-bottom" style="text-align:center; margin:30px 0;"></div>
+  <div class="ad-container" id="monetag-ad-bottom"></div>
 
   <footer>
-    <p>&copy; 2025 All in One SEO Tools. Free SEO text utilities.</p>
+    <p>&copy; 2025 All in One SEO Tools. Free SEO utilities for your content and websites.</p>
   </footer>
 
-  <!-- ✅ JavaScript Functions -->
   <script>
     const wordInput = document.getElementById('wordInput');
     const wordCount = document.getElementById('wordCount');
     const charCount = document.getElementById('charCount');
-
-    wordInput.addEventListener('input', () => {
-      const text = wordInput.value.trim();
-      wordCount.textContent = text === '' ? 0 : text.split(/\s+/).length;
-      charCount.textContent = text.length;
-    });
+    if (wordInput) {
+      wordInput.addEventListener('input', () => {
+        const text = wordInput.value.trim();
+        wordCount.textContent = text === '' ? 0 : text.split(/\s+/).length;
+        charCount.textContent = text.length;
+      });
+    }
 
     function removeSpaces() {
       const input = document.getElementById('spaceInput');
@@ -109,6 +113,17 @@
     function removeLineBreaks() {
       const input = document.getElementById('lineInput');
       input.value = input.value.replace(/[\r\n]+/g, ' ');
+    }
+
+    function generateMetaTags() {
+      const title = document.getElementById('metaTitle').value.trim();
+      const description = document.getElementById('metaDescription').value.trim();
+      const output = document.getElementById('metaOutput');
+      if (title && description) {
+        output.textContent = `<meta name=\"title\" content=\"${title}\">\n<meta name=\"description\" content=\"${description}\">`;
+      } else {
+        output.textContent = "Please enter title and description.";
+      }
     }
   </script>
 </body>
