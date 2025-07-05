@@ -4,6 +4,7 @@ body {
   padding: 20px;
   background-color: #f9f9f9;
   color: #333;
+  line-height: 1.6;
 }
 
 header, footer {
@@ -11,22 +12,27 @@ header, footer {
   margin-bottom: 30px;
 }
 
-textarea {
+textarea, input[type="text"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   resize: vertical;
   font-size: 1rem;
+  box-sizing: border-box;
 }
 
 button {
-  margin: 5px;
+  margin: 5px 5px 10px 0;
   padding: 8px 16px;
   background-color: #2c7be5;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 0.95rem;
+  transition: background 0.3s ease;
 }
 
 button:hover {
@@ -37,6 +43,30 @@ section {
   background: white;
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+pre {
+  background: #f3f3f3;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: monospace;
+  margin-top: 10px;
+}
+
+.ad-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }
