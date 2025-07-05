@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ✅ Verification Tags -->
   <meta name="msvalidate.01" content="87FCA7ABF98937AB887B066D8186E394" />
   <meta name="monetag" content="f99dde558c619ad60b1e9ea6f96f554c" />
   <meta name="google-site-verification" content="K55DTPrL1Kh1slZIdac4TgaArhFDKk6ZVUFt6IY2f_M" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- ✅ Updated SEO Meta Tags -->
+  <!-- ✅ SEO Meta Tags -->
+  <title>All in One SEO Tools – Free Online Text & SEO Utilities</title>
   <meta name="description" content="All in One SEO Tools - Free online tools to clean, format, and optimize text for SEO, blogging, and writing." />
   <meta name="keywords" content="SEO tools, text tools, word counter, keyword checker, meta generator, content tools" />
   <meta name="author" content="All in One SEO Tools Team" />
 
-  <!-- ✅ Updated Title -->
-  <title>All in One SEO Tools – Free Online Text & SEO Utilities</title>
+  <!-- ✅ Social Sharing -->
+  <meta property="og:title" content="All in One SEO Tools" />
+  <meta property="og:description" content="Free tools to clean, format, and optimize your text for SEO & blogging." />
+  <meta property="og:url" content="https://boost-text-tools.netlify.app/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="All in One SEO Tools" />
+  <meta name="twitter:description" content="Free tools to clean, format, and optimize text for SEO." />
 
+  <!-- ✅ CSS & JS -->
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 
-  <!-- ✅ Updated Structured Data -->
+  <!-- ✅ Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,9 +39,50 @@
   }
   </script>
 </head>
+
 <body>
   <header>
-    <!-- ✅ Updated Branding Header -->
     <h1>All in One SEO Tools</h1>
     <p>Your free online hub for SEO‑friendly text tools.</p>
   </header>
+
+  <!-- ✅ Monetag Ads Script -->
+  <script>
+    (function() {
+      var monetag = document.createElement("script");
+      monetag.src = "//cdn.monetag.com/js/monetag.js";
+      monetag.async = true;
+      monetag.type = "text/javascript";
+      monetag.onload = function() {
+        Monetag.init("f99dde558c619ad60b1e9ea6f96f554c");
+      };
+      document.head.appendChild(monetag);
+    })();
+  </script>
+
+  <!-- ✅ Tools Section (Add your tools here) -->
+  <main>
+    <section id="word-counter">
+      <h2>Word Counter Tool</h2>
+      <textarea id="input-text" placeholder="Paste your content here..." rows="8" cols="80"></textarea>
+      <p><strong>Word Count:</strong> <span id="word-count">0</span></p>
+      <button onclick="countWords()">Count Words</button>
+    </section>
+
+    <!-- More tools can go here -->
+  </main>
+
+  <footer>
+    <p>&copy; 2025 All in One SEO Tools. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ Word Counter Script Example -->
+  <script>
+    function countWords() {
+      const text = document.getElementById("input-text").value;
+      const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+      document.getElementById("word-count").textContent = words.length;
+    }
+  </script>
+</body>
+</html>
