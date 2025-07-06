@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://boost-text-tools.netlify.app/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://boost-text-tools.netlify.app/</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#word-counter</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#remove-spaces</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#case-converter</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#remove-line-breaks</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#meta-tag-generator</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#keyword-density</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#slug-generator</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#html-entities</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#ascii-converter</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#json-formatter</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#base64-encoder</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#base64-decoder</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#text-reverser</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#url-encoder</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#url-decoder</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#domain-checker</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#robots-generator</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#sitemap-generator</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#lorem-generator</loc></url>
+  <url><loc>https://boost-text-tools.netlify.app/#char-frequency</loc></url>
 </urlset>
