@@ -1,140 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="All in One SEO Tools – 20+ Free Online Tools for SEO, Text Optimization, Meta Tag Generator, Keyword Analyzer & More." />
-  <meta name="keywords" content="SEO tools, keyword tools, free seo analyzer, meta tag generator, text cleaner, word counter, case converter, remove line breaks, html entities converter, slug generator, text to ascii, keyword density checker, url encoder, json formatter, domain checker, robots.txt generator, sitemap generator, lorem ipsum generator, base64 encoder, text reverser" />
-  <meta name="author" content="All in One SEO Tools Team" />
-  <meta name="google-site-verification" content="K55DTPrL1Kh1slZIdac4TgaArhFDKk6ZVUFt6IY2f_M" />
-  <meta name="monetag" content="f99dde558c619ad60b1e9ea6f96f554c" />
-  <meta name="msvalidate.01" content="87FCA7ABF98937AB887B066D8186E394" />
+<!-- Only showing the updated <main> section with IDs -->
+<main>
+  <section id="word-counter">
+    <h2>Word & Character Counter</h2>
+    <textarea id="wordInput"></textarea>
+    <p>Words: <span id="wordCount">0</span> | Characters: <span id="charCount">0</span></p>
+  </section>
 
-  <title>All in One SEO Tools – Free Online SEO & Text Utilities</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <section id="remove-spaces">
+    <h2>Remove Extra Spaces</h2>
+    <textarea id="spaceInput"></textarea>
+  </section>
 
-  <!-- Monetag Ads -->
-  <script type="text/javascript">
-    atOptions = {
-      'key' : 'f99dde558c619ad60b1e9ea6f96f554c',
-      'format' : 'iframe',
-      'height' : 250,
-      'width' : 300,
-      'params' : {}
-    };
-    document.addEventListener("DOMContentLoaded", function() {
-      let top = document.getElementById("monetag-ad-top");
-      let bottom = document.getElementById("monetag-ad-bottom");
-      if (top && bottom) {
-        let s = document.createElement('script');
-        s.src = 'https://www.highrevenuegate.com/f99dde558c619ad60b1e9ea6f96f554c/invoke.js';
-        top.appendChild(s);
+  <section id="case-converter">
+    <h2>Case Converter</h2>
+    <textarea id="caseInput"></textarea>
+    <button onclick="toLowerCaseText()">Lowercase</button>
+    <button onclick="toUpperCaseText()">Uppercase</button>
+  </section>
 
-        let b = document.createElement('script');
-        b.src = 'https://www.highrevenuegate.com/f99dde558c619ad60b1e9ea6f96f554c/invoke.js';
-        bottom.appendChild(b);
-      }
-    });
-  </script>
+  <section id="remove-line-breaks">
+    <h2>Remove Line Breaks</h2>
+    <textarea id="lineInput"></textarea>
+    <button onclick="removeLineBreaks()">Remove Breaks</button>
+  </section>
 
-</head>
-<body>
-  <header>
-    <h1>All in One SEO Tools</h1>
-    <p>20+ free SEO tools for writers, bloggers, marketers, and webmasters.</p>
-  </header>
+  <section id="meta-tag-generator">
+    <h2>Meta Tag Generator</h2>
+    <input type="text" id="metaTitle" placeholder="Title" />
+    <input type="text" id="metaDescription" placeholder="Description" />
+    <button onclick="generateMetaTags()">Generate Meta Tags</button>
+    <pre id="metaOutput"></pre>
+  </section>
 
-  <div class="ad-container" id="monetag-ad-top"></div>
+  <section id="keyword-density">
+    <h2>Keyword Density Checker</h2>
+    <textarea id="densityInput"></textarea>
+    <button onclick="checkKeywordDensity()">Check Density</button>
+    <pre id="densityOutput"></pre>
+  </section>
 
-  <main>
-    <section>
-      <h2>Word & Character Counter</h2>
-      <textarea id="wordInput"></textarea>
-      <p>Words: <span id="wordCount">0</span> | Characters: <span id="charCount">0</span></p>
-    </section>
+  <section id="slug-generator">
+    <h2>Slug Generator</h2>
+    <input type="text" id="slugInput" />
+    <button onclick="generateSlug()">Generate Slug</button>
+    <pre id="slugOutput"></pre>
+  </section>
 
-    <section>
-      <h2>Remove Extra Spaces</h2>
-      <textarea id="spaceInput"></textarea>
-    </section>
+  <section id="html-entities">
+    <h2>HTML Entities Converter</h2>
+    <textarea id="htmlInput"></textarea>
+    <button onclick="convertToEntities()">Convert</button>
+    <pre id="htmlOutput"></pre>
+  </section>
 
-    <section>
-      <h2>Case Converter</h2>
-      <textarea id="caseInput"></textarea>
-      <button onclick="toLowerCaseText()">Lowercase</button>
-      <button onclick="toUpperCaseText()">Uppercase</button>
-    </section>
+  <section id="ascii-converter">
+    <h2>Text to ASCII</h2>
+    <textarea id="asciiInput"></textarea>
+    <button onclick="convertToAscii()">Convert</button>
+    <pre id="asciiOutput"></pre>
+  </section>
 
-    <section>
-      <h2>Remove Line Breaks</h2>
-      <textarea id="lineInput"></textarea>
-      <button onclick="removeLineBreaks()">Remove Breaks</button>
-    </section>
+  <section id="json-formatter">
+    <h2>JSON Formatter</h2>
+    <textarea id="jsonInput"></textarea>
+    <button onclick="formatJson()">Format JSON</button>
+    <pre id="jsonOutput"></pre>
+  </section>
 
-    <section>
-      <h2>Meta Tag Generator</h2>
-      <input type="text" id="metaTitle" placeholder="Title" />
-      <input type="text" id="metaDescription" placeholder="Description" />
-      <button onclick="generateMetaTags()">Generate Meta Tags</button>
-      <pre id="metaOutput"></pre>
-    </section>
+  <section id="base64-tools">
+    <h2>Base64 Encoder/Decoder</h2>
+    <textarea id="base64Input"></textarea>
+    <button onclick="encodeBase64()">Encode</button>
+    <button onclick="decodeBase64()">Decode</button>
+    <pre id="base64Output"></pre>
+  </section>
 
-    <section>
-      <h2>Keyword Density Checker</h2>
-      <textarea id="densityInput"></textarea>
-      <button onclick="checkKeywordDensity()">Check Density</button>
-      <pre id="densityOutput"></pre>
-    </section>
-
-    <section>
-      <h2>Slug Generator</h2>
-      <input type="text" id="slugInput" />
-      <button onclick="generateSlug()">Generate Slug</button>
-      <pre id="slugOutput"></pre>
-    </section>
-
-    <section>
-      <h2>HTML Entities Converter</h2>
-      <textarea id="htmlInput"></textarea>
-      <button onclick="convertToEntities()">Convert</button>
-      <pre id="htmlOutput"></pre>
-    </section>
-
-    <section>
-      <h2>Text to ASCII</h2>
-      <textarea id="asciiInput"></textarea>
-      <button onclick="convertToAscii()">Convert</button>
-      <pre id="asciiOutput"></pre>
-    </section>
-
-    <section>
-      <h2>JSON Formatter</h2>
-      <textarea id="jsonInput"></textarea>
-      <button onclick="formatJson()">Format JSON</button>
-      <pre id="jsonOutput"></pre>
-    </section>
-
-    <section>
-      <h2>Base64 Encoder/Decoder</h2>
-      <textarea id="base64Input"></textarea>
-      <button onclick="encodeBase64()">Encode</button>
-      <button onclick="decodeBase64()">Decode</button>
-      <pre id="base64Output"></pre>
-    </section>
-
-    <section>
-      <h2>Text Reverser</h2>
-      <textarea id="reverseInput"></textarea>
-      <button onclick="reverseText()">Reverse</button>
-      <pre id="reverseOutput"></pre>
-    </section>
-  </main>
-
-  <div class="ad-container" id="monetag-ad-bottom"></div>
-
-  <footer>
-    <p>&copy; 2025 All in One SEO Tools. Powering your digital content.</p>
-  </footer>
-</body>
-</html>
+  <section id="text-reverser">
+    <h2>Text Reverser</h2>
+    <textarea id="reverseInput"></textarea>
+    <button onclick="reverseText()">Reverse</button>
+    <pre id="reverseOutput"></pre>
+  </section>
+</main>
