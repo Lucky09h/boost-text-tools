@@ -12,27 +12,6 @@
   <title>All in One SEO Tools – Free Online SEO & Text Utilities</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-
-  <!-- ✅ Monetag Ads Script -->
-  <script type="text/javascript">
-    atOptions = {
-      'key': 'f99dde558c619ad60b1e9ea6f96f554c',
-      'format': 'iframe',
-      'height': 250,
-      'width': 300,
-      'params': {}
-    };
-    document.addEventListener("DOMContentLoaded", function () {
-      ['monetag-ad-top', 'monetag-ad-bottom'].forEach(id => {
-        const ad = document.getElementById(id);
-        if (ad) {
-          const s = document.createElement('script');
-          s.src = 'https://www.highrevenuegate.com/f99dde558c619ad60b1e9ea6f96f554c/invoke.js';
-          ad.appendChild(s);
-        }
-      });
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -40,12 +19,10 @@
     <p>20+ free SEO tools for writers, bloggers, marketers, and webmasters.</p>
   </header>
 
-  <!-- 🔝 Top Ad -->
+  <!-- Monetag Ad Top -->
   <div class="ad-container" id="monetag-ad-top"></div>
 
   <main>
-    <!-- [All Tools Sections – same as before, unchanged] -->
-
     <section id="word-counter">
       <h2>Word & Character Counter</h2>
       <textarea id="wordInput"></textarea>
@@ -129,24 +106,38 @@
     </section>
   </main>
 
-  <!-- 🔚 Bottom Ad -->
+  <!-- Monetag Ad Bottom -->
   <div class="ad-container" id="monetag-ad-bottom"></div>
 
   <footer>
     <p>&copy; 2025 All in One SEO Tools. Powering your digital content.</p>
   </footer>
 
-  <!-- 🔸 Ad Script: gizokraijaw.net -->
+  <!-- ✅ Combined Ads Script -->
   <script>
-    (function(d,z,s){
-      s.src='https://'+d+'/401/'+z;
-      try {
-        (document.body||document.documentElement).appendChild(s)
-      } catch(e){}
-    })('gizokraijaw.net',9537738,document.createElement('script'));
-  </script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Monetag Ads
+      ['monetag-ad-top', 'monetag-ad-bottom'].forEach(id => {
+        const ad = document.getElementById(id);
+        if (ad) {
+          const s = document.createElement('script');
+          s.src = 'https://www.highrevenuegate.com/f99dde558c619ad60b1e9ea6f96f554c/invoke.js';
+          ad.appendChild(s);
+        }
+      });
 
-  <!-- 🔸 Ad Script: shoukigaigoors.net -->
-  <script src="https://shoukigaigoors.net/act/files/tag.min.js?z=9537854" data-cfasync="false" async></script>
+      // gizokraijaw.net Ad
+      (function (d, z, s) {
+        s.src = 'https://' + d + '/401/' + z;
+        try { (document.body || document.documentElement).appendChild(s) } catch (e) { }
+      })('gizokraijaw.net', 9537738, document.createElement('script'));
+
+      // shoukigaigoors.net Ad
+      let s2 = document.createElement('script');
+      s2.src = 'https://shoukigaigoors.net/act/files/tag.min.js?z=9537854';
+      s2.async = true;
+      document.body.appendChild(s2);
+    });
+  </script>
 </body>
 </html>
